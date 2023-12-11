@@ -1,15 +1,13 @@
+import { Link } from 'react-router-dom';
+
 function Sidebar() {
-  return (
-    <aside className="conatiner2">
-      <ul>
-        {/* <li>
-          <Link to="#">Home</Link>
-        </li>
-        <li>
-          <Link to="about">About</Link>
-        </li> */}
-      </ul>
-    </aside>
-  );
+    return (
+        <aside className="conatiner2">
+
+            <Link to="/">Home</Link>
+            <Link to="about">About</Link>
+
+        </aside >
+    );
 }
 export default Sidebar;
