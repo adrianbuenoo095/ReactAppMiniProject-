@@ -3,9 +3,9 @@ import recipeBook from "../assets/recipeBook.png";
 function Navbar() {
     return (
         <nav className="navbar">
-            <div className="container1">
+            <div className="container-one">
                 <div className="appName">
-                    <img src={recipeBook} />
+                    <img src={recipeBook} alt="Recipe Book" />
                 </div>
             </div>
         </nav>
