@@ -43,7 +43,7 @@ function HomePage() {
         <main className="main">
           <h1 className="intro">Welcome to Your App!</h1>
           <p>Some content</p>
-          <p>ggggggg content</p>
+          <p>THIS content</p>
         </main>
       </div>
       <Footer />
