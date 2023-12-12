@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import RecipeList from "./components/RecipeList";
 import Sidebar from "./components/Sidebar";
 
-function HomePage() {
+const HomePage = () => {
   return (
     <div>
       <Navbar />
