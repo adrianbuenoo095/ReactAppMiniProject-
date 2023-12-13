@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 function Sidebar() {
     return (
         <aside className="conatiner-two">
-            <Link to="/">home</Link>
-            <Link to="about">About</Link>
+            <li>
+                <Link to="/">home</Link>
+            </li>
+            <li>
+                <Link to="/about">About</Link>
+            </li>
         </aside >
     );
 }
