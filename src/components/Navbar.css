@@ -9,3 +9,13 @@
   width: 200px;
   height: 100px;
 }
+.navbar .leftside {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+.navbar .leftside img {
+  width: 150px;
+}

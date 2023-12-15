@@ -12,7 +12,7 @@ function Sidebar() {
         <Link to="/about">AboutUs</Link>
       </li>
       <li>
-        <Link to="/about">Contact</Link>
+        <Link to="/contact">Contact</Link>
       </li>
     </div>
   );
