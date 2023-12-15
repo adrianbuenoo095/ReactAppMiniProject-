@@ -1,14 +1,16 @@
+import React from "react";
 function Footer() {
-    return (
-        <footer className="ElementFooter">
-            <div className="container">
-                <p>All rights reserved</p>
-                <a target="_blank" href="https://github.com/adrianbuenoo095/ReactAppMiniProject-" rel="noreferrer" >
-                    Github
-                </a>
-            </div>
-        </footer>
-    );
+  return (
+    <div className="footer">
+      <a
+        target="_blank"
+        href="https://github.com/adrianbuenoo095/ReactAppMiniProject-"
+        rel="noreferrer"
+      >
+        Github
+      </a>
+    </div>
+  );
 }
 
 export default Footer;

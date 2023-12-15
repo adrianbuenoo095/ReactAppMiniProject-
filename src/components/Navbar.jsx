@@ -1,14 +1,14 @@
-import recipeBook from "../assets/recipeBook.png";
+import logo from "../assets/logo.jpg";
+import "../components/Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="container-one">
-        <div className="appName">
-          <img src={recipeBook} alt="Recipe Book" />
-        </div>
+    <div className="navbar">
+      <div className="leftside">
+        <img className="logo " src={logo} />
       </div>
-    </nav>
+      <div classname="rightside"></div>
+    </div>
   );
 }
 export default Navbar;

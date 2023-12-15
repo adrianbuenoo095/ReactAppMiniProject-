@@ -1,25 +1,20 @@
 import "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import RecipeList from "./components/RecipeList";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
 import Sidebar from "./components/Sidebar";
 
-const HomePage = () => {
+import React from "react";
+
+function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
-      <div className="container5">
-        <Sidebar />
-        <main className="main">
-          <h1 className="intro">Welcome to Your App!</h1>
-          <p>Some content</p>
-          <p>THIS content</p>
-          <RecipeList />
-        </main>
-      </div>
+      <Sidebar />
       <Footer />
     </div>
   );
 }
 
-export default HomePage;
+export default App;
