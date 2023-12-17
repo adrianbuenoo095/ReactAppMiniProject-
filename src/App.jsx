@@ -4,14 +4,14 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Sidebar from "./components/Sidebar";
-
-import React from "react";
+import RecipeList from "./components/RecipeList";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Sidebar />
+      <RecipeList />
       <Footer />
     </div>
   );
