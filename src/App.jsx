@@ -1,13 +1,15 @@
-import classes from "./App.css";
-import { Footer } from './components/common/Footer.jsx';
-import { Navbar } from "./components/common/Navbar.jsx";
-import { Sidebar } from "./components/common/Sidebar.jsx";
+import "./App.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import RecipeList from "./components/RecipeList";
+import Sidebar from "./components/Sidebar";
 
-const App = () => {
+function App() {
   return (
     <div className={classes.app}>
       <Navbar />
       <Sidebar />
+      <RecipeList />
       <Footer />
     </div>
   );
