@@ -1,4 +1,4 @@
-import logo from "...";
+import logo from "../assets/logo.jpg";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {

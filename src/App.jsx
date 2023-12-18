@@ -1,4 +1,4 @@
-import classes from "./App.css";
+import "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import RecipeList from "./components/RecipeList";
@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
-    <div className={classes.app}>
+    <div className="app">
       <Navbar />
       <Sidebar />
       <RecipeList />

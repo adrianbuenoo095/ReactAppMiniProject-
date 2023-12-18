@@ -1,9 +1,11 @@
+import { useState } from "react";
 import recipeList from "../assets/recipes.json";
 import classes from "./Recipe.module.css";
-import { useState } from "react";
 
 const RecipeList = () => {
+
   const [recipes, setRecipes] = useState(recipeList);
+
   const handleDelete = (recipeId) => {
     // Filter out the recipe with the specified ID
     const updatedRecipes = recipes.filter((recipe) => recipe.id !== recipeId);
@@ -11,9 +13,8 @@ const RecipeList = () => {
     console.log(updatedRecipes);
   };
 
-  console.log(recipeList);
-
   return recipeList.map((recipe) => {
+    console.log(recipe.image);
     return (
       <div className={classes.container} key={recipe.id}>
         <div>
