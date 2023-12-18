@@ -1,8 +1,10 @@
+import classes from "./RecipeCard.module.css";
+
 const RecipeCard = ({ id, name, calories, image, servings, remove }) => {
     return (
-        <div>
+        <div className={classes.container}>
             <div>
-                <img src={image} />
+                <img className={classes.img} src={image} />
             </div>
             <div>
                 <h1>{name}</h1>
