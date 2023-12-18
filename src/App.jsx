@@ -4,24 +4,25 @@ import {
 import "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import RecipeList from "./components/RecipeList";
 import Sidebar from "./components/Sidebar";
-import AboutPage from "./components/pages/AboutPage";
-import ItemDetailsPage from "./components/pages/ItemDetailsPage";
-import NotFound from "./components/pages/NotFoundPage";
+import AboutPage from "./pages/AboutPage";
+import Homepage from "./pages/HomePage";
+import ItemDetailsPage from "./pages/ItemDetailsPage";
+import NotFound from "./pages/NotFoundPage";
 
 const App = () => {
   return (
     <div className="app">
       <Routes>
-        {/* <Route path="/" element={<Dashboard />} /> */}
-        <Route path="about" element={<AboutPage />} />
-        <Route path="itemDetails" element={<ItemDetailsPage />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="recipes/:recipeId" element={<ItemDetailsPage />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Navbar />
       <Sidebar />
-      <RecipeList />
+      {/* <RecipeList /> */}
       <Footer />
     </div>
   );
