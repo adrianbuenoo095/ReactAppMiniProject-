@@ -8,7 +8,6 @@ const Homepage = () => {
     const [recipes, setRecipes] = useState(recipesData);
 
     const handleDelete = (recipeId) => {
-        // Filter out the recipe with the specified ID
         const updatedRecipes = recipes.filter((recipe) => recipe.id !== recipeId);
 
         setRecipes(updatedRecipes);
