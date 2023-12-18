@@ -1,10 +1,10 @@
-import "./App.css";
+import classes from "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import RecipeList from "./components/RecipeList";
 import Sidebar from "./components/Sidebar";
 
-function App() {
+const App = () => {
   return (
     <div className={classes.app}>
       <Navbar />
