@@ -1,10 +1,9 @@
-import "../App.css";
 import { Link } from "react-router-dom";
-import "./Sidebar.css";
+import classes from "./Sidebar.module.css";
 
-function Sidebar() {
+const Sidebar = () => {
   return (
-    <div className="Sidebar">
+    <div className={classes.sidebar}>
       <li>
         <Link to="/">Home</Link>
       </li>

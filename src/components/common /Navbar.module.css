@@ -9,7 +9,8 @@
   width: 200px;
   height: 100px;
 }
-.navbar .leftside {
+
+.leftside {
   flex: 50%;
   height: 100%;
   display: flex;

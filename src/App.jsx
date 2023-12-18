@@ -1,15 +1,11 @@
-import "./App.css";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./components/pages/Home";
-import Sidebar from "./components/Sidebar";
+import classes from "./App.css";
+import { Footer } from './components/common/Footer.jsx';
+import { Navbar } from "./components/common/Navbar.jsx";
+import { Sidebar } from "./components/common/Sidebar.jsx";
 
-import React from "react";
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className={classes.app}>
       <Navbar />
       <Sidebar />
       <Footer />
