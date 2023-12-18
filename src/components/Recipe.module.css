@@ -5,7 +5,11 @@
   gap: 20px;
   padding: 10px;
   margin: 20px;
+  position: relative;
+  
 }
+
+
 
 .img {
   max-width: 200px;
