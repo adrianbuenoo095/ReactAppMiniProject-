@@ -1,21 +1,29 @@
-const RecipeForm = () => {
-  // const [file, setFile] = useState();
-
-  // const handleChangeFile = (event) => {
-  //     const currentFile = event.target.files[0];
-  //     setFile(...currentFile, [event.target.name] : currentFile)
-  //     let formData = new FormData();
-  //     formData.append('file', file);
-  // }
-
+const RecipeForm = ({ submit, RecipeTitle, change, image }) => {
   return (
-    <>
-      <form>
-        <input name="query" />
-        <input type="" name="query" value={file} onChange={handleChangeFile} />
-        <button type="submit">Search</button>
-      </form>
-    </>
+    <form onSubmit={submit}>
+      <label>
+        Text:
+        <input
+          name="RecipeTitle"
+          type="text"
+          value={RecipeTitle}
+          onChange={change}
+        />
+      </label>
+      <br />
+      <label>
+        Image:
+        <input
+          type="file"
+          accept="image/*"
+          value={image}
+          name="image"
+          onChange={change}
+        />
+      </label>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
   );
 };
 
