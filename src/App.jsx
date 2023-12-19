@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
+import RecipeForm from "./components/recipe/RecipeForm";
 import AboutPage from "./pages/AboutPage";
 import Homepage from "./pages/HomePage";
 import ItemDetailsPage from "./pages/ItemDetailsPage";
 import NotFound from "./pages/NotFoundPage";
-import RecipeForm from "./components/recipe/";
 
 const App = () => {
   return (
