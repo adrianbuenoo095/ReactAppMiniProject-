@@ -18,7 +18,6 @@ const App = () => {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <h1>Image Upload Form</h1>
       <Footer />
     </div>
   );

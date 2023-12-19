@@ -11,16 +11,14 @@ const Homepage = () => {
         const updatedRecipes = recipes.filter((recipe) => recipe.id !== recipeId);
 
         setRecipes(updatedRecipes);
-        console.log(updatedRecipes);
     };
 
     const initialValues = {
         name: "",
         image: "",
     };
-    const [formData, setFormData] = useState(initialValues);
 
-    console.log(formData);
+    const [formData, setFormData] = useState(initialValues);
 
     const handleChange = (e) => {
         const currentName = e.target.name;
