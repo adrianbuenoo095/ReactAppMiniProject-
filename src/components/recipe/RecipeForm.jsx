@@ -1,12 +1,12 @@
-const RecipeForm = ({ submit, RecipeTitle, change, image }) => {
+const RecipeForm = ({ submit, name, change, image }) => {
   return (
     <form onSubmit={submit}>
       <label>
         Text:
         <input
-          name="RecipeTitle"
+          name="name"
           type="text"
-          value={RecipeTitle}
+          value={name}
           onChange={change}
         />
       </label>
