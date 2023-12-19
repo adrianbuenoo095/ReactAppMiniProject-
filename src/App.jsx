@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
-import RecipeForm from "./components/recipe/RecipeForm";
 import AboutPage from "./pages/AboutPage";
 import Homepage from "./pages/HomePage";
 import ItemDetailsPage from "./pages/ItemDetailsPage";
@@ -20,7 +19,6 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <h1>Image Upload Form</h1>
-      <RecipeForm />
       <Footer />
     </div>
   );
