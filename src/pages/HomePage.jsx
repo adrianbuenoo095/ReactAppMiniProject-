@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import recipesData from "../assets/recipes.json";
 import RecipeCard from "../components/RecipeCard";
 
@@ -20,9 +19,8 @@ const Homepage = () => {
             {recipes &&
                 recipes.map((recipe) => {
                     return (
-                        <Link to={`/recipes/${recipe.id}`} key={recipe.id}>
-                            <RecipeCard id={recipe.id} name={recipe.name} image={recipe.image} remove={handleDelete} />
-                        </Link>
+                        <RecipeCard key={recipe.id} id={recipe.id} name={recipe.name} image={recipe.image} remove={handleDelete} />
+
                     );
                 })}
         </div>

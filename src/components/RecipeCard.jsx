@@ -1,8 +1,14 @@
 import classes from "./RecipeCard.module.css";
 
+import { useNavigate } from 'react-router-dom';
+
 const RecipeCard = ({ id, name, calories, image, servings, remove }) => {
+    const navigate = useNavigate()
+
     return (
-        <div className={classes.container}>
+        <div className={classes.container} onClick={() =>
+            navigate(`/recipes/${id}`)
+        }>
             <div>
                 <img className={classes.img} src={image} />
             </div>
@@ -15,8 +21,12 @@ const RecipeCard = ({ id, name, calories, image, servings, remove }) => {
                 )}
                 <p>{servings}</p>
             </div>
-            <button className="deleteButton" onClick={remove}>Delete</button>
-        </div>);
+            <button type="button" className="deleteButton" onClick={(event) => {
+                event.stopPropagation()
+                console.log('Delete triggered')
+                remove(id)
+            }}>Delete</button>
+        </div >);
 }
 
 export default RecipeCard;
