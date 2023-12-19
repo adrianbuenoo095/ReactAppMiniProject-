@@ -49,23 +49,23 @@ const Homepage = () => {
                     submit={handleSubmit}
                 />
             </div>
-            {recipes &&
-                recipes.map((recipe) => {
-                    return (
-                        <div className="container mx-auto p-4" key={recipe.id} >
-                            <div className="grid gap-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
-                                <RecipeCard
-                                    id={recipe.id}
-                                    name={recipe.name}
-                                    image={recipe.image}
-                                    remove={handleDelete}
-                                    {...recipe}
-                                />
+            <div className="grid gap-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 mb-16"  >
+                {recipes &&
+                    recipes.map((recipe) => {
+                        return (
+                            <RecipeCard
+                                id={recipe.id}
+                                name={recipe.name}
+                                image={recipe.image}
+                                remove={handleDelete}
+                                {...recipe}
+                                key={recipe.id}
+                            />
 
-                            </div>
-                        </div>
-                    );
-                })}
+
+                        );
+                    })}
+            </div>
         </div >
     );
 };
