@@ -6,16 +6,15 @@ import RecipeForm from "../components/recipe/RecipeForm";
 const Homepage = () => {
     // eslint-disable-next-line no-unused-vars
     const [recipes, setRecipes] = useState(recipesData);
+    const initialValues = {
+        name: "",
+        image: "",
+    };
 
     const handleDelete = (recipeId) => {
         const updatedRecipes = recipes.filter((recipe) => recipe.id !== recipeId);
 
         setRecipes(updatedRecipes);
-    };
-
-    const initialValues = {
-        name: "",
-        image: "",
     };
 
     const [formData, setFormData] = useState(initialValues);
@@ -24,7 +23,9 @@ const Homepage = () => {
         const currentName = e.target.name;
         let currentValue = e.target.value;
         if (e.target.type === "file") {
-            currentValue = e.target.file;
+            if (e.target.files.length !== 0) {
+                currentValue = URL.createObjectURL(e.target.files[0])
+            }
         }
 
         setFormData({ ...formData, [currentName]: currentValue });
