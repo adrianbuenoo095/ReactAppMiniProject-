@@ -1,43 +1,36 @@
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import NavBar from "./Navbar";
+import { Link } from "react-router-dom";
+import classes from "./Sidebar.module.css";
+const menuItems = [
+	{ id: 1, label: 'Dashboard', link: '/' },
+	{ id: 2, label: 'About Us', link: '/about' },
+	{ id: 3, label: 'Contact', link: '/contact' },
+];
+
 
 const Sidebar = () => {
-	const [nav, setNav] = useState(false);
+	// const [nav, setNav] = useState(false);
 
-	console.log('nav', nav);
+	// console.log('nav', nav);
 
-	const toggleNav = () => {
-		setNav((prevNav) => !prevNav);
-	};
-
+	// const toggleNav = () => {
+	// 	setNav((prevNav) => !prevNav);
 	return (
-		<div className="bg-black max-w-[1640px] mx-auto flex p-4 shadow-sm">
-			<div className="">
-				<div onClick={toggleNav} className="cursor-pointer">
-					<FontAwesomeIcon icon={faBars} />
-				</div>
-			</div>
 
-			{nav && (
-				<div className="bg-red-500 fixed z-10 top-0 right-0">
-					<div
-						className={`fixed top-0 right-0 w-[300px] h-screen bg-black z-10 duration-300 ${nav ? '' : 'right-[-100%]'}`}
-					>
-						<FontAwesomeIcon
-							onClick={toggleNav}
-							icon={faTimes}
-							className="absolute right-4 top-4 cursor-pointer"
-						/>
-						<div>
-							<NavBar />
+		<div className={classes.sidebar}>
+			<nav>
+				<ul className="flex flex-col p-4 text-gray-800">
+					{menuItems.map((item) => (
+						<div className="py-4" key={item.id}>
+							<li className="text-xl flex cursor-pointer w-[50 %] rounded - full mx - auto p - 2 hover:text-white hover:bg-black" >
+								<Link to={item.link}>{item.label}</Link>
+							</li>
 						</div>
-					</div>
-				</div>
-			)}
+					))}
+				</ul>
+			</nav >
 		</div>
-	);
-}
 
+	);
+
+}
 export default Sidebar;
