@@ -9,10 +9,10 @@ const menuItems = [
 const Navbar = () => {
   return (
     <nav>
-      <ul className="flex flex-col p-4 text-gray-800">
+      <ul>
         {menuItems.map((item) => (
           <div className="py-4" key={item.id}>
-            <li className="text-xl flex cursor-pointer w-[50 %] rounded - full mx - auto p - 2 hover:text-white hover:bg-black" >
+            <li >
               <Link to={item.link}>{item.label}</Link>
             </li>
           </div>
