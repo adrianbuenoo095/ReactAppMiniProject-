@@ -5,19 +5,19 @@ import RecipeForm from "../components/recipe/RecipeForm";
 
 const Homepage = () => {
     // eslint-disable-next-line no-unused-vars
-    const [recipes, setRecipes] = useState(recipesData);
     const initialValues = {
         name: "",
         image: "",
     };
+
+    const [recipes, setRecipes] = useState(recipesData);
+    const [formData, setFormData] = useState(initialValues);
 
     const handleDelete = (recipeId) => {
         const updatedRecipes = recipes.filter((recipe) => recipe.id !== recipeId);
 
         setRecipes(updatedRecipes);
     };
-
-    const [formData, setFormData] = useState(initialValues);
 
     const handleChange = (e) => {
         const currentName = e.target.name;
@@ -27,7 +27,6 @@ const Homepage = () => {
                 currentValue = URL.createObjectURL(e.target.files[0])
             }
         }
-
         setFormData({ ...formData, [currentName]: currentValue });
     };
 
@@ -43,27 +42,13 @@ const Homepage = () => {
         <div>
             <h1>Home Page</h1>
             <div>
-                <RecipeForm
-                    change={handleChange}
-                    text={initialValues.name}
-                    image={initialValues.image}
-                    submit={handleSubmit}
-                />
+                <RecipeForm change={handleChange} text={initialValues.name} image={initialValues.image} submit={handleSubmit} />
             </div>
             <div className="grid gap-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 mb-16"  >
                 {recipes &&
                     recipes.map((recipe) => {
                         return (
-                            <RecipeCard
-                                id={recipe.id}
-                                name={recipe.name}
-                                image={recipe.image}
-                                remove={handleDelete}
-                                {...recipe}
-                                key={recipe.id}
-                            />
-
-
+                            <RecipeCard key={recipe.id} id={recipe.id} name={recipe.name} image={recipe.image} remove={handleDelete} {...recipe} />
                         );
                     })}
             </div>
