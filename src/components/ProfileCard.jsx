@@ -19,7 +19,6 @@ const ProfileCard = ({ fullname, profileImage, gitGublink, aboutMe, linkedinLink
                 </div>
 
             </div>
-
         </>
     );
 }
