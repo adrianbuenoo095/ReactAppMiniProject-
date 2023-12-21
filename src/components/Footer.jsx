@@ -1,15 +1,11 @@
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
-    <div className="footer">
-      <a
-        className="githubLink"
-        target="_blank"
-        href="https://github.com/adrianbuenoo095/ReactAppMiniProject-"
-        rel="noreferrer"
-      >
-        Github
-      </a>
+    <div className="footer"
+    >
+      <div>&copy; The awesome Recipe App {currentYear}&nbsp;</div>
+
     </div>
   );
 }
