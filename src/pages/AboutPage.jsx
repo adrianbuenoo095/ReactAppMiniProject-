@@ -1,10 +1,8 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import profileImage from "../assets/images/prabeshikaProfile.jpg";
 import ProfileCard from "../components/ProfileCard";
-
-
-const profileImageOne = "./assets/images/prabeshikaProfile.jpg";
 
 const linkedinLink = (
     <Link href="https://www.linkedin.com/in/prabeshikakoirala/" target="_blank">
@@ -13,7 +11,7 @@ const linkedinLink = (
 )
 
 const githubLink = (
-    <Link href="https://github.com/Prabeshikak?tab=repositories" target="_blank">
+    <Link href="https://github.com/Prabeshikak" target="_blank">
         <FontAwesomeIcon className="w-[25px]" icon={faGithub} />
     </Link>
 )
@@ -23,12 +21,13 @@ const firstStudentBio = "Hi I'm Prabeshika Koirala. I have an experience working
 const AboutPage = () => {
     return (
         <>
-            <div className="firstStudent">
-                <ProfileCard fullname="Prabeshika Koirala" profileImage={profileImageOne} aboutMe={firstStudentBio} linkedinLink={linkedinLink} gitGublink={githubLink} />
+            <div className="bg-black">
+                <ProfileCard fullname="Prabeshika Koirala" profileImage={profileImage} aboutMe={firstStudentBio} linkedin={linkedinLink} github={githubLink} />
             </div>
-            <div className="secondStudent">
-                <ProfileCard />
-            </div>
+
+
+            {/* <ProfileCard /> */}
+
         </>
     );
 }
