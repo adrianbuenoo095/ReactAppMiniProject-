@@ -3,6 +3,8 @@ import recipesData from "../assets/recipes.json";
 import RecipeCard from "../components/RecipeCard";
 import RecipeForm from "../components/recipe/RecipeForm";
 
+
+
 const Homepage = () => {
     // eslint-disable-next-line no-unused-vars
     const initialValues = {
@@ -39,12 +41,12 @@ const Homepage = () => {
     };
 
     return (
-        <div>
-            <h1>Home Page</h1>
+        <div >
             <div>
                 <RecipeForm change={handleChange} text={initialValues.name} image={initialValues.image} submit={handleSubmit} />
             </div>
-            <div className="grid gap-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 mb-16"  >
+
+            <div className="grid gap-4 gap-y-8 relative ml-36  md:grid-cols-2 lg:grid-cols-3 mb-16" >
                 {recipes &&
                     recipes.map((recipe) => {
                         return (
